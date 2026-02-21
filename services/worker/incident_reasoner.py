@@ -2,6 +2,7 @@ import redis
 import json
 import requests
 
+
 from services.worker.llm_reasoner import analyze_incident
 from services.worker.decision_engine import decide
 
@@ -63,4 +64,4 @@ while True:
         "action": action
     }
 
-    requests.post("http://localhost:8000/push", json=payload)
+    requests.post("http://127.0.0.1:8000/push", json=payload)
